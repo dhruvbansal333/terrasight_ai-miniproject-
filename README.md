@@ -306,22 +306,13 @@ python test_cleanpath.py -v
 
 ---
 
-## 21. Viva Questions & Answers
+## My Contribution
 
-### 1. Why YOLOv8?
-YOLOv8 (You Only Look Once v8 Nano) is a single-stage anchor-free object detection architecture that predicts bounding boxes and class probabilities in a single forward pass. It provides high-speed real-time inference on both CPUs and GPUs, making it ideal for local and edge civic deployments without cloud GPU costs.
+**Role: Dataset Preparation & Machine Learning Support**
 
-### 2. Why TACO?
-TACO (*Trash Annotations in Context*) is an open-source benchmark dataset of real-world litter across diverse outdoor environments (roadsides, pavements, vegetation). Mapping its 60 fine-grained classes into 3 actionable municipal categories (`Plastic Waste`, `Organic Waste`, `Dry Leaves / Biomass`) aligns computer vision output directly with sanitation crew equipment needs.
+- Worked on understanding and exploring the **TACO (Trash Annotations in Context) dataset** for waste detection and classification.
+- Assisted in dataset preparation, annotation understanding, and organizing data for YOLOv8 model training.
+- Contributed to mapping TACO's 60 fine-grained waste classes into three functional municipal categories: Plastic Waste, Organic Waste, and Dry Leaves / Biomass.
+- Assisted in the model training workflow using **YOLOv8n**, including dataset conversion and training configuration.
+- Collaborated with the team in reviewing the machine learning workflow and supporting model development and integration.
 
-### 3. Why DBSCAN?
-Unlike K-Means, **DBSCAN** does not require specifying the number of clusters ($k$) in advance. Since a city does not know ahead of time how many distinct waste hotspots will emerge on a given day, DBSCAN naturally discovers arbitrary-shaped spatial clusters defined by a physical distance threshold (`50 meters`).
-
-### 4. Why Haversine?
-Latitude and longitude are spherical coordinates on Earth's curved surface, where $1^\circ$ of longitude varies with latitude. Standard Euclidean distance ($\sqrt{\Delta\text{lat}^2 + \Delta\text{lon}^2}$) distorts real-world meter distances. The **Haversine formula** accurately computes great-circle distances in meters over Earth's radius ($R = 6,371,000\text{ m}$).
-
-### 5. Why EXIF?
-Modern smartphones embed Exchangeable Image File Format (**EXIF**) metadata containing `GPSLatitude`, `GPSLatitudeRef`, `GPSLongitude`, and `GPSLongitudeRef` in Degrees/Minutes/Seconds (DMS). Extracting EXIF allows zero-click automatic localization of waste incidents at the exact spot the photograph was taken.
-
-### 6. Why Manual Fallback?
-Browser security policies, desktop uploads, screenshots, and compressed images frequently strip EXIF GPS tags. Providing an interactive **Leaflet Map Pin Picker** ensures citizens can still accurately pinpoint and submit waste complaints even when metadata is absent.
